@@ -59,12 +59,12 @@ const StatCards = () => {
             <Grid item xs={12} md={6}>
                 <StyledCard elevation={6}>
                     <ContentBox>
-                        <Icon className="icon">attach_money</Icon>
+                        <Icon className="icon">build</Icon>
                         <Box ml="12px">
                             <Small sx={{ lineHeight: 1 }}>
-                                This week Sales
+                                Cost Maintenance Vehicle
                             </Small>
-                            <Heading>$80,500</Heading>
+                            <Heading>IDR 8.000.000</Heading>
                         </Box>
                     </ContentBox>
                     <Tooltip title="View Details" placement="top">
@@ -77,10 +77,10 @@ const StatCards = () => {
             <Grid item xs={12} md={6}>
                 <StyledCard elevation={6}>
                     <ContentBox>
-                        <Icon className="icon">store</Icon>
+                        <Icon className="icon">local_shipping</Icon>
                         <Box ml="12px">
-                            <Small>Inventory Status</Small>
-                            <Heading>8.5% Stock Surplus</Heading>
+                            <Small>Total Payload</Small>
+                            <Heading>11.200 Kg</Heading>
                         </Box>
                     </ContentBox>
                     <Tooltip title="View Details" placement="top">
@@ -93,10 +93,10 @@ const StatCards = () => {
             <Grid item xs={12} md={6}>
                 <StyledCard elevation={6}>
                     <ContentBox>
-                        <Icon className="icon">shopping_cart</Icon>
+                        <Icon className="icon">attach_money</Icon>
                         <Box ml="12px">
-                            <Small>Orders to deliver</Small>
-                            <Heading>305 Orders</Heading>
+                            <Small>Total Cost</Small>
+                            <Heading>IDR 28.000.000</Heading>
                         </Box>
                     </ContentBox>
                     <Tooltip title="View Details" placement="top">

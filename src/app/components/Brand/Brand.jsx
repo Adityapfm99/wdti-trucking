@@ -25,17 +25,17 @@ const Brand = ({ children }) => {
     return (
         <BrandRoot>
             <Box display="flex" alignItems="center">
-                <MatxLogo />
+                {/* <MatxLogo /> */}
                 <StyledSpan mode={mode} className="sidenavHoverShow">
-                    Matx
+                    TRUCKING SYSTEM
                 </StyledSpan>
             </Box>
-            <Box
+            {/* <Box
                 className="sidenavHoverShow"
                 sx={{ display: mode === 'compact' ? 'none' : 'block' }}
             >
                 {children || null}
-            </Box>
+            </Box> */}
         </BrandRoot>
     )
 }

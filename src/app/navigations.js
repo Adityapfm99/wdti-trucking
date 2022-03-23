@@ -126,7 +126,7 @@ export const navigations = [
         children: [
             {
                 name: 'Monitoring Vehicle',
-                path: '/material/autocomplete',
+                path: '/material/monitoring-vehicle',
                 iconText: 'A',
             },
             {
@@ -142,7 +142,7 @@ export const navigations = [
         ],
     },
     {
-        label: 'Maintenance',
+        label: 'Master',
         type: 'label',
     },
     {

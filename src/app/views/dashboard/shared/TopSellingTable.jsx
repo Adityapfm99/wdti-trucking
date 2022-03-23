@@ -68,55 +68,59 @@ const TopSellingTable = () => {
     return (
         <Card elevation={3} sx={{ pt: '20px', mb: 3 }}>
             <CardHeader>
-                <Title>top selling products</Title>
-                <Select size="small" defaultValue="this_month">
-                    <MenuItem value="this_month">This Month</MenuItem>
-                    <MenuItem value="last_month">Last Month</MenuItem>
+                <Title>top 5 Drivers</Title>
+                <Select size="small" defaultValue="this_week">
+                    <MenuItem value="this_week">This Week</MenuItem>
+                    <MenuItem value="last_week">Last Week</MenuItem>
                 </Select>
             </CardHeader>
             <Box overflow="auto">
                 <ProductTable>
                     <TableHead>
                         <TableRow>
-                            <TableCell sx={{ px: 3 }} colSpan={4}>
-                                Name
+                            <TableCell sx={{ px: 0 }} colSpan={2}>
+                                 Driver Name
                             </TableCell>
                             <TableCell sx={{ px: 0 }} colSpan={2}>
-                                Revenue
+                                Vehicle Name
                             </TableCell>
                             <TableCell sx={{ px: 0 }} colSpan={2}>
+                                Total Payload
+                            </TableCell>
+                            {/* <TableCell sx={{ px: 0 }} colSpan={2}>
                                 Stock Status
                             </TableCell>
                             <TableCell sx={{ px: 0 }} colSpan={1}>
                                 Action
-                            </TableCell>
+                            </TableCell> */}
                         </TableRow>
                     </TableHead>
                     <TableBody>
                         {productList.map((product, index) => (
                             <TableRow key={index} hover>
                                 <TableCell
-                                    colSpan={4}
+                                    colSpan={2}
                                     align="left"
                                     sx={{ px: 0, textTransform: 'capitalize' }}
                                 >
-                                    <Box display="flex" alignItems="center">
-                                        <Avatar src={product.imgUrl} />
-                                        <Paragraph sx={{ m: 0, ml: 4 }}>
-                                            {product.name}
-                                        </Paragraph>
-                                    </Box>
+                                     {product.driverName}
+                          
+                                </TableCell>
+                                <TableCell
+                                    colSpan={2}
+                                    align="left"
+                                    sx={{ px: 0, textTransform: 'capitalize' }}
+                                >
+                                     {product.vehicleName}
+                          
                                 </TableCell>
                                 <TableCell
                                     align="left"
                                     colSpan={2}
                                     sx={{ px: 0, textTransform: 'capitalize' }}
                                 >
-                                    $
-                                    {product.price > 999
-                                        ? (product.price / 1000).toFixed(1) +
-                                        'k'
-                                        : product.price}
+                                    
+                                    {product.load} kg
                                 </TableCell>
 
                                 <TableCell
@@ -157,32 +161,37 @@ const TopSellingTable = () => {
 const productList = [
     {
         imgUrl: '/assets/images/products/headphone-2.jpg',
-        name: 'earphone',
-        price: 100,
+        driverName: 'Driver A',
+        vehicleName :'MITSUBISHI, CANTER',
+        load: 8000,
         available: 15,
     },
     {
         imgUrl: '/assets/images/products/headphone-3.jpg',
-        name: 'earphone',
-        price: 1500,
+        driverName: 'Driver B',
+        vehicleName :'MITSUBISHI, CANTER',
+        load: 7100,
         available: 30,
     },
     {
         imgUrl: '/assets/images/products/iphone-2.jpg',
-        name: 'iPhone x',
-        price: 1900,
+        driverName: 'Driver C',
+        vehicleName :'MITSUBISHI, CANTER',
+        load: 5400,
         available: 35,
     },
     {
         imgUrl: '/assets/images/products/iphone-1.jpg',
-        name: 'iPhone x',
-        price: 100,
+        driverName: 'Driver D',
+        vehicleName :'MITSUBISHI, CANTER',
+        load: 5300,
         available: 0,
     },
     {
         imgUrl: '/assets/images/products/headphone-3.jpg',
-        name: 'Head phone',
-        price: 1190,
+        driverName: 'Driver E',
+        vehicleName :'MITSUBISHI, CANTER',
+        load: 5000,
         available: 5,
     },
 ]

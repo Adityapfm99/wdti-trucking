@@ -18,7 +18,7 @@ const DoughnutChart = ({ height, color = [] }) => {
             },
         },
         tooltip: {
-            show: false,
+            show: true,
             trigger: 'item',
             formatter: '{a} <br/>{b}: {c} ({d}%)',
         },
@@ -45,9 +45,9 @@ const DoughnutChart = ({ height, color = [] }) => {
 
         series: [
             {
-                name: 'Traffic Rate',
+                name: 'Status Vehicle',
                 type: 'pie',
-                radius: ['45%', '72.55%'],
+                // radius: ['45%', '72.55%'],
                 center: ['50%', '50%'],
                 avoidLabelOverlap: false,
                 hoverOffset: 5,
@@ -68,32 +68,31 @@ const DoughnutChart = ({ height, color = [] }) => {
                         textStyle: {
                             fontSize: '14',
                             fontWeight: 'normal',
-                            // color: "rgba(15, 21, 77, 1)"
+                            color: "rgba(15, 21, 77, 1)",
                         },
                         formatter: '{b} \n{c} ({d}%)',
                     },
                 },
                 labelLine: {
                     normal: {
-                        show: false,
+                        show: true,
                     },
                 },
                 data: [
                     {
-                        value: 65,
-                        name: 'Google',
+                        value: 187,
+                        name: 'active',
                     },
                     {
-                        value: 20,
-                        name: 'Facebook',
+                        value: 13,
+                        name: 'In Maintenance',
                     },
-                    { value: 15, name: 'Others' },
                 ],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
                         shadowOffsetX: 0,
-                        shadowColor: 'rgba(0, 0, 0, 0.5)',
+                        // shadowColor: 'rgba(0, 0, 0, 0.5)',
                     },
                 },
             },

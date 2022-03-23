@@ -15,6 +15,7 @@ const AppDialog = Loadable(lazy(() => import("./dialog/AppDialog")));
 const AppSnackbar = Loadable(lazy(() => import("./snackbar/AppSnackbar")));
 const AppAutoComplete = Loadable(lazy(() => import("./auto-complete/AppAutoComplete")));
 const AppExpansionPanel = Loadable(lazy(() => import("./expansion-panel/AppExpansionPanel")));
+const MonitoringVehicle = Loadable(lazy(() => import("./monitoring-vehicle/AppTable")));
 
 const materialRoutes = [
     {
@@ -60,6 +61,10 @@ const materialRoutes = [
     {
         path: '/material/autocomplete',
         element: <AppAutoComplete />,
+    },
+    {
+        path: '/material/monitoring-vehicle',
+        element: <MonitoringVehicle />,
     },
     {
         path: '/material/expansion-panel',

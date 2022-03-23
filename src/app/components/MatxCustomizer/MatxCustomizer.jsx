@@ -109,7 +109,7 @@ const MatxCustomizer = () => {
         <Fragment>
             <Tooltip title="Theme Settings" placement="left">
                 <Label className="open" onClick={tooglePanel}>
-                    DEMOS
+                    THEME
                 </Label>
             </Tooltip>
 
@@ -138,13 +138,13 @@ const MatxCustomizer = () => {
                             </IconButton>
                         </Controller>
                         <Box px={3} mb={2} display="flex">
-                            <Button
+                            {/* <Button
                                 variant="outlined"
                                 color={tabIndex === 0 ? 'secondary' : 'primary'}
                                 onClick={() => handleTabChange(0)}
                                 sx={{ mr: 2 }}
                             >
-                                Demos
+                                Theme
                             </Button>
                             <Button
                                 variant="outlined"
@@ -152,7 +152,7 @@ const MatxCustomizer = () => {
                                 onClick={() => handleTabChange(1)}
                             >
                                 Settings
-                            </Button>
+                            </Button> */}
                         </Box>
 
                         <StyledScrollBar options={{ suppressScrollX: true }}>
@@ -207,16 +207,7 @@ const MatxCustomizer = () => {
                             {/* END LAYOUT */}
                             {tabIndex === 1 && (
                                 <div>
-                                    <div className="helpText">
-                                        We used React context API to control
-                                        layout. Check out the{' '}
-                                        <Link
-                                            href="http://demos.ui-lib.com/matx-react-doc/layout.html"
-                                            target="_blank"
-                                        >
-                                            Documentation
-                                        </Link>
-                                    </div>
+                                    
                                 </div>
                             )}
                         </StyledScrollBar>
@@ -231,7 +222,7 @@ const demoLayouts = [
     {
         name: 'Light Sidebar',
         thumbnail: '/assets/images/screenshots/layout1-customizer.png',
-        isPro: false,
+        isPro: true,
         options: {
             activeLayout: 'layout1',
             activeTheme: 'blue',
@@ -254,7 +245,7 @@ const demoLayouts = [
     {
         name: 'Compact Sidebar',
         thumbnail: '/assets/images/screenshots/layout5-customizer.png',
-        isPro: false,
+        isPro: true,
         options: {
             activeLayout: 'layout1',
             activeTheme: 'blue',
@@ -274,7 +265,7 @@ const demoLayouts = [
     {
         name: 'Dark Sidebar',
         thumbnail: '/assets/images/screenshots/layout1-blue-customizer.png',
-        isPro: false,
+        isPro: true,
         options: {
             activeLayout: 'layout1',
             activeTheme: 'blue',
