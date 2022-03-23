@@ -43,10 +43,10 @@ const StatCards = () => {
             <Grid item xs={12} md={6}>
                 <StyledCard elevation={6}>
                     <ContentBox>
-                        <Icon className="icon">group</Icon>
+                        <Icon className="icon">local_gas_station</Icon>
                         <Box ml="12px">
-                            <Small>New Leads</Small>
-                            <Heading>3050</Heading>
+                            <Small>Cost Fuel</Small>
+                            <Heading>IDR 20.000.000</Heading>
                         </Box>
                     </ContentBox>
                     <Tooltip title="View Details" placement="top">

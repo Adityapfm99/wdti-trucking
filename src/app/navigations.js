@@ -116,6 +116,111 @@ export const navigations = [
         ],
     },
     {
+        label: 'Monitoring',
+        type: 'label',
+    },
+    {
+        name: 'Monitoring',
+        icon: 'monitoring',
+        badge: { value: '3', color: 'secondary' },
+        children: [
+            {
+                name: 'Monitoring Vehicle',
+                path: '/material/autocomplete',
+                iconText: 'A',
+            },
+            {
+                name: 'Monitoring Load',
+                path: '/material/buttons',
+                iconText: 'B',
+            },
+            {
+                name: 'Monitoring Fuel',
+                path: '/material/checkbox',
+                iconText: 'C',
+            },
+        ],
+    },
+    {
+        label: 'Maintenance',
+        type: 'label',
+    },
+    {
+        name: 'Master',
+        icon: 'settings',
+        badge: { color: 'secondary' },
+        children: [
+            {
+                name: 'Master Driver',
+                path: '/material/autocomplete',
+                iconText: 'A',
+            },
+            {
+                name: 'Master Vehicle',
+                path: '/material/buttons',
+                iconText: 'B',
+            },
+            {
+                name: 'Master Supplier',
+                path: '/material/checkbox',
+                iconText: 'C',
+            },
+        ],
+    },
+    {
+        label: 'Maintenance',
+        type: 'label',
+    },
+    {
+        name: 'Maintenance',
+        icon: 'build',
+        badge: { color: 'secondary' },
+        children: [
+            {
+                name: 'Master Driver',
+                path: '/material/autocomplete',
+                iconText: 'A',
+            },
+            {
+                name: 'Master Vehicle',
+                path: '/material/buttons',
+                iconText: 'B',
+            },
+            {
+                name: 'Master Supplier',
+                path: '/material/checkbox',
+                iconText: 'C',
+            },
+        ],
+    },
+    {
+        label: 'Report',
+        type: 'label',
+    },
+    {
+        name: 'Report',
+        icon: 'report',
+        badge: { color: 'secondary' },
+        children: [
+            {
+                name: 'Report Driver',
+                path: '/material/autocomplete',
+                iconText: 'A',
+            },
+            {
+                name: 'Report vehicle',
+                path: '/material/buttons',
+                iconText: 'B',
+            },
+            {
+                name: 'Report',
+                path: '/material/checkbox',
+                iconText: 'C',
+            },
+        ],
+    },
+    
+    {
         name: 'Charts',
         icon: 'trending_up',
 
@@ -127,10 +232,10 @@ export const navigations = [
             },
         ],
     },
-    {
-        name: 'Documentation',
-        icon: 'launch',
-        type: 'extLink',
-        path: 'http://demos.ui-lib.com/matx-react-doc/',
-    },
+    // {
+    //     name: 'Documentation',
+    //     icon: 'launch',
+    //     type: 'extLink',
+    //     path: 'http://demos.ui-lib.com/matx-react-doc/',
+    // },
 ]

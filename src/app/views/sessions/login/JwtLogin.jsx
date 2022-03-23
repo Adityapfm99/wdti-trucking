@@ -5,6 +5,7 @@ import {
     Checkbox,
     CircularProgress,
     FormControlLabel,
+    Typography
 } from '@mui/material'
 import React, { useState } from 'react'
 import useAuth from 'app/hooks/useAuth'
@@ -24,7 +25,7 @@ const JustifyBox = styled(FlexBox)(() => ({
 
 const ContentBox = styled(Box)(() => ({
     height: '100%',
-    padding: '32px',
+    padding: '42px',
     position: 'relative',
     background: 'rgba(0, 0, 0, 0.01)',
 }))
@@ -34,7 +35,7 @@ const IMG = styled('img')(() => ({
 }))
 
 const JWTRoot = styled(JustifyBox)(() => ({
-    background: '#1A2038',
+    background: '#15235c',
     minHeight: '100% !important',
     '& .card': {
         maxWidth: 800,
@@ -85,15 +86,25 @@ const JwtLogin = () => {
         <JWTRoot>
             <Card className="card">
                 <Grid container>
+                <br></br>
+                <br></br>
+                    <Typography
+                    variant="h5"
+                    align="center"
+                    width="100%"
+                    >
+                    Trucking Management System
+                    </Typography>
                     <Grid item lg={5} md={5} sm={5} xs={12}>
-                        <JustifyBox p={4} height="100%">
+                        <JustifyBox p={6} height="100%">
                             <IMG
-                                src="/assets/images/illustrations/dreamer.svg"
+                                src="/assets/images/auth2.png"
                                 alt=""
                             />
                         </JustifyBox>
                     </Grid>
-                    <Grid item lg={7} md={7} sm={7} xs={12}>
+                    <Grid item lg={7} md={7} sm={7} xs={10}>
+
                         <ContentBox>
                             <ValidatorForm onSubmit={handleFormSubmit}>
                                 <TextValidator
