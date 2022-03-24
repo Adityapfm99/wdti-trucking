@@ -31,110 +31,99 @@ const StyledTable = styled(Table)(({ theme }) => ({
     },
 }))
 
-const monitoringVehicleList = [
+const monitoringLoad = [
+    {
+        vehicleName: 'MITSUBISHI, FUSO',
+        driverName: 'DRIVER A',
+        licensePlate: 'B 7192 YUI',
+        lastSync: '2022-03-22 09:40:00',
+        status: 'active',
+        weight: '900 Kg',
+    },
     {
         vehicleName: 'MITSUBISHI, CANTER',
-        driverName: 'DRIVER A',
-        licensePlate: 'B 7710 QWE',
-        status: 'active',
-        fuel: 100,
-        weight: 730,
-        lastPosition: 'SPBU 3900 Kalimantan',
-    },
-    {
-        vehicleName: 'MITSUBISHI, FUSO',
         driverName: 'DRIVER B',
-        licensePlate: 'B 7921 IOP',
+        licensePlate: 'B 7690 GHO',
+        lastSync: '2022-03-22 09:44:00',
         status: 'active',
-        fuel: 90,
-        weight: 770,
-        lastPosition: 'SPBU 3900 Kalimantan',
+        weight: '880 Kg',
     },
     {
-        vehicleName: 'MITSUBISHI, FUSO',
+        vehicleName: 'TOYOTA, DYNA',
         driverName: 'DRIVER C',
-        licensePlate: 'B 7121 GHB',
+        licensePlate: 'B 7299 AAI',
+        lastSync: '2022-03-22 09:42:00',
         status: 'active',
-        fuel: 110,
-        weight: 810,
-        lastPosition: 'SPBU 3900 Kalimantan',
+        weight: '970 Kg',
     },
     {
         vehicleName: 'MITSUBISHI, FUSO',
         driverName: 'DRIVER D',
-        licensePlate: 'B 7001 GWO',
+        licensePlate: 'B 7716 VBU',
+        lastSync: '2022-03-22 09:45:00',
         status: 'active',
-        fuel: 101,
-        weight: 790,
-        lastPosition: 'SPBU 3900 Kalimantan',
+        weight: '870 Kg',
     },
     {
-        vehicleName: 'MITSUBISHI, FUSO',
+        vehicleName: 'MITSUBISHI, CANTER',
         driverName: 'DRIVER E',
-        licensePlate: 'B 7492 HJW',
+        licensePlate: 'B 7991 JKO',
+        lastSync: '2022-03-22 09:48:00',
         status: 'active',
-        fuel: 110,
-        weight: 840,
-        lastPosition: 'SPBU 3900 Kalimantan',
+        weight: '910 Kg',
     },
     {
         vehicleName: 'MITSUBISHI, FUSO',
         driverName: 'DRIVER F',
-        licensePlate: 'B 7887 IOP',
+        licensePlate: 'B 7010 TUI',
+        lastSync: '2022-03-22 09:40:00',
         status: 'active',
-        fuel: 100,
-        weight: 812,
-        lastPosition: 'SPBU 3900 Kalimantan',
+        weight: '930 Kg',
     },
     {
         vehicleName: 'MITSUBISHI, FUSO',
         driverName: 'DRIVER G',
-        licensePlate: 'B 7201 FGS',
+        licensePlate: 'B 7662 TYU',
+        lastSync: '2022-03-22 09:40:00',
         status: 'active',
-        fuel: 100,
-        weight: 810,
-        lastPosition: 'SPBU 3900 Kalimantan',
+        weight: '900 Kg',
     },
     {
         vehicleName: 'MITSUBISHI, FUSO',
         driverName: 'DRIVER H',
-        licensePlate: 'B 7769 UJI',
+        licensePlate: 'B 7090 BHU',
+        lastSync: '2022-03-22 09:40:00',
         status: 'active',
-        fuel: 80,
-        weight: 833,
-        lastPosition: 'SPBU 3900 Kalimantan',
+        weight: '900 Kg',
     },
     {
         vehicleName: 'MITSUBISHI, FUSO',
         driverName: 'DRIVER I',
-        licensePlate: 'B 7013 ULO',
+        licensePlate: 'B 7712 QWE',
+        lastSync: '2022-03-22 09:40:00',
         status: 'active',
-        fuel: 120,
-        weight: 820,
-        lastPosition: 'SPBU 3900 Kalimantan',
+        weight: '400 Kg',
     },
     {
-        vehicleName: 'TOYOTA, DYNA',
+        vehicleName: 'MITSUBISHI, FUSO',
         driverName: 'DRIVER J',
-        licensePlate: 'B 7291 GHW',
+        licensePlate: 'B 7302 DJI',
+        lastSync: '2022-03-22 09:40:00',
         status: 'active',
-        fuel: 120,
-        weight: 810,
-        lastPosition: 'SPBU 3900 Kalimantan',
+        weight: '820 Kg',
     },
     {
-        vehicleName: 'MITSUBISHI, CANTER',
-        driverName: 'DRIVER K',
-        licensePlate: 'B 7772 HUK',
+        vehicleName: 'MITSUBISHI, FUSO',
+        driverName: 'DRIVER A',
+        licensePlate: 'B 7299 AAI',
+        lastSync: '2022-03-22 09:40:00',
         status: 'active',
-        fuel: 110,
-        weight: 823,
-        lastPosition: 'SPBU 3900 Kalimantan',
+        weight: '650 Kg',
     },
 ]
 
-const MonitoringTable = () => {
-    const [rowsPerPage, setRowsPerPage] = React.useState(10)
+const MonitoringLoadTable = () => {
+    const [rowsPerPage, setRowsPerPage] = React.useState(5)
     const [page, setPage] = React.useState(0)
 
     const handleChangePage = (event, newPage) => {
@@ -154,15 +143,14 @@ const MonitoringTable = () => {
                         <TableCell>Vehicle Name</TableCell>
                         <TableCell>Driver Name</TableCell>
                         <TableCell>License Plate</TableCell>
-                        <TableCell>Last Position</TableCell>
-                        <TableCell>Weight (kg)</TableCell>
-                        <TableCell>Fuel (ltr)</TableCell>
-                        <TableCell>Live Location</TableCell>
-                        <TableCell>Video Cam</TableCell>
+                        <TableCell>Last Sync</TableCell>
+                        <TableCell>Status</TableCell>
+                        <TableCell>Weight</TableCell>
+                     
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {monitoringVehicleList
+                    {monitoringLoad
                         .slice(
                             page * rowsPerPage,
                             page * rowsPerPage + rowsPerPage
@@ -175,13 +163,13 @@ const MonitoringTable = () => {
                                 <TableCell align="left">
                                     {vehicle.driverName}
                                 </TableCell>
-                                <TableCell alignItems="left">
+                                <TableCell align="left">
                                     {vehicle.licensePlate}
                                 </TableCell>
-                                <TableCell>{vehicle.lastPosition}</TableCell>
-                                <TableCell align = "left">{vehicle.weight}</TableCell>
-                                <TableCell align = "left">{vehicle.fuel}</TableCell>
-                                <TableCell>
+                                <TableCell>{vehicle.lastSync}</TableCell>
+                                <TableCell>{vehicle.status}</TableCell>
+                                <TableCell>{vehicle.weight}</TableCell>
+                                {/* <TableCell>
                                     <IconButton>
                                         <Icon color="info">my_location</Icon>
                                     </IconButton>
@@ -190,7 +178,7 @@ const MonitoringTable = () => {
                                     <IconButton>
                                         <Icon color="info">videocam</Icon>
                                     </IconButton>
-                                </TableCell>
+                                </TableCell> */}
                             </TableRow>
                         ))}
                 </TableBody>
@@ -200,7 +188,7 @@ const MonitoringTable = () => {
                 sx={{ px: 2 }}
                 rowsPerPageOptions={[10, 20, 30]}
                 component="div"
-                count={monitoringVehicleList.length}
+                count={monitoringLoad.length}
                 rowsPerPage={rowsPerPage}
                 page={page}
                 backIconButtonProps={{
@@ -216,4 +204,4 @@ const MonitoringTable = () => {
     )
 }
 
-export default MonitoringTable
+export default MonitoringLoadTable

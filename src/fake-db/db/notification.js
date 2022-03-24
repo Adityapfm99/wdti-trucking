@@ -20,7 +20,7 @@ const NotificationDB = {
             heading: 'Alert',
             icon: {
                 name: 'notifications',
-                color: 'error',
+                color: 'warning',
             },
             timestamp: 1570702702573,
             title: 'Server overloaded',

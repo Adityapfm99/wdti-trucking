@@ -1,5 +1,5 @@
 import React from 'react'
-import PaginationTable from './MonitoringTable'
+import PaginationTable from './MasterDriverTable'
 import { Breadcrumb, SimpleCard } from 'app/components'
 import { Box, styled } from '@mui/system'
 
@@ -23,13 +23,13 @@ const AppTable = () => {
                 <Breadcrumb
                     routeSegments={[
                         { name: 'Material', path: '/material' },
-                        { name: 'Monitoring Vehicle' },
+                        { name: 'Master Driver' },
                     ]}
                 />
             </div>
 
             <Box py="12px" />
-            <SimpleCard title="Monitoring Vehicle">
+            <SimpleCard title="Master Driver">
                 <PaginationTable />
             </SimpleCard>
         </Container>

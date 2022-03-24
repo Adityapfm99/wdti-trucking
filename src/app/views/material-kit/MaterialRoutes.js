@@ -16,6 +16,9 @@ const AppSnackbar = Loadable(lazy(() => import("./snackbar/AppSnackbar")));
 const AppAutoComplete = Loadable(lazy(() => import("./auto-complete/AppAutoComplete")));
 const AppExpansionPanel = Loadable(lazy(() => import("./expansion-panel/AppExpansionPanel")));
 const MonitoringVehicle = Loadable(lazy(() => import("./monitoring-vehicle/AppTable")));
+const MonitoringLoad = Loadable(lazy(() => import("./monitoring-load/AppTable")));
+const MonitoringFuel = Loadable(lazy(() => import("./monitoring-fuel/AppTable")));
+const MasterDriver = Loadable(lazy(() => import("./master-driver/AppTable")));
 
 const materialRoutes = [
     {
@@ -65,6 +68,18 @@ const materialRoutes = [
     {
         path: '/material/monitoring-vehicle',
         element: <MonitoringVehicle />,
+    },
+    {
+        path: '/material/monitoring-load',
+        element: <MonitoringLoad />,
+    },
+    {
+        path: '/material/monitoring-fuel',
+        element: <MonitoringFuel />,
+    },
+    {
+        path: '/material/master-driver',
+        element: <MasterDriver />,
     },
     {
         path: '/material/expansion-panel',

@@ -10,6 +10,8 @@ import {
 } from '@mui/material'
 import React from 'react'
 import { Box, styled } from '@mui/system'
+import { Button } from '@mui/material'
+import { Link } from 'react-router-dom';
 
 const StyledTable = styled(Table)(({ theme }) => ({
     whiteSpace: 'pre',
@@ -31,10 +33,12 @@ const StyledTable = styled(Table)(({ theme }) => ({
     },
 }))
 
-const monitoringVehicleList = [
+const driverList = [
     {
         vehicleName: 'MITSUBISHI, CANTER',
         driverName: 'DRIVER A',
+        nik: '354928129366001',
+        pic: 'KOORDINATOR A',
         licensePlate: 'B 7710 QWE',
         status: 'active',
         fuel: 100,
@@ -44,6 +48,8 @@ const monitoringVehicleList = [
     {
         vehicleName: 'MITSUBISHI, FUSO',
         driverName: 'DRIVER B',
+        nik: '354928129366001',
+        pic: 'KOORDINATOR B',
         licensePlate: 'B 7921 IOP',
         status: 'active',
         fuel: 90,
@@ -54,6 +60,8 @@ const monitoringVehicleList = [
         vehicleName: 'MITSUBISHI, FUSO',
         driverName: 'DRIVER C',
         licensePlate: 'B 7121 GHB',
+        nik: '354928129366001',
+        pic: 'KOORDINATOR C',
         status: 'active',
         fuel: 110,
         weight: 810,
@@ -62,6 +70,8 @@ const monitoringVehicleList = [
     {
         vehicleName: 'MITSUBISHI, FUSO',
         driverName: 'DRIVER D',
+        nik: '354928129366001',
+        pic: 'KOORDINATOR D',
         licensePlate: 'B 7001 GWO',
         status: 'active',
         fuel: 101,
@@ -71,6 +81,8 @@ const monitoringVehicleList = [
     {
         vehicleName: 'MITSUBISHI, FUSO',
         driverName: 'DRIVER E',
+        nik: '354928129366001',
+        pic: 'KOORDINATOR E',
         licensePlate: 'B 7492 HJW',
         status: 'active',
         fuel: 110,
@@ -80,6 +92,8 @@ const monitoringVehicleList = [
     {
         vehicleName: 'MITSUBISHI, FUSO',
         driverName: 'DRIVER F',
+        nik: '354928129366001',
+        pic: 'KOORDINATOR F',
         licensePlate: 'B 7887 IOP',
         status: 'active',
         fuel: 100,
@@ -89,6 +103,8 @@ const monitoringVehicleList = [
     {
         vehicleName: 'MITSUBISHI, FUSO',
         driverName: 'DRIVER G',
+        nik: '354928129366001',
+        pic: 'KOORDINATOR G',
         licensePlate: 'B 7201 FGS',
         status: 'active',
         fuel: 100,
@@ -98,6 +114,8 @@ const monitoringVehicleList = [
     {
         vehicleName: 'MITSUBISHI, FUSO',
         driverName: 'DRIVER H',
+        nik: '354928129366001',
+        pic: 'KOORDINATOR H',
         licensePlate: 'B 7769 UJI',
         status: 'active',
         fuel: 80,
@@ -107,6 +125,8 @@ const monitoringVehicleList = [
     {
         vehicleName: 'MITSUBISHI, FUSO',
         driverName: 'DRIVER I',
+        nik: '354928129366001',
+        pic: 'KOORDINATOR I',
         licensePlate: 'B 7013 ULO',
         status: 'active',
         fuel: 120,
@@ -116,6 +136,8 @@ const monitoringVehicleList = [
     {
         vehicleName: 'TOYOTA, DYNA',
         driverName: 'DRIVER J',
+        nik: '354928129366001',
+        pic: 'KOORDINATOR J',
         licensePlate: 'B 7291 GHW',
         status: 'active',
         fuel: 120,
@@ -125,6 +147,8 @@ const monitoringVehicleList = [
     {
         vehicleName: 'MITSUBISHI, CANTER',
         driverName: 'DRIVER K',
+        nik: '354928129366001',
+        pic: 'KOORDINATOR K',
         licensePlate: 'B 7772 HUK',
         status: 'active',
         fuel: 110,
@@ -145,24 +169,79 @@ const MonitoringTable = () => {
         setRowsPerPage(+event.target.value)
         setPage(0)
     }
+    const AppButtonRoot = styled('div')(({ theme }) => ({
+        margin: '30px',
+        [theme.breakpoints.down('sm')]: {
+            margin: '16px',
+        },
+        '& .breadcrumb': {
+            marginBottom: '30px',
+            [theme.breakpoints.down('sm')]: {
+                marginBottom: '16px',
+            },
+        },
+        '& .button': {
+            margin: theme.spacing(1),
+        },
+        '& .input': {
+            display: 'none',
+        },
+    }))
+    
+    const StyledButton = styled(Button)(({ theme }) => ({
+        margin: theme.spacing(1),
+    }))
 
     return (
+
         <Box width="100%" overflow="auto">
+                <StyledButton component={Link} to="/material/monitoring-vehicle" variant="contained" color="primary">
+                    Add Driver
+                </StyledButton>
             <StyledTable>
+
                 <TableHead>
                     <TableRow>
-                        <TableCell>Vehicle Name</TableCell>
-                        <TableCell>Driver Name</TableCell>
-                        <TableCell>License Plate</TableCell>
-                        <TableCell>Last Position</TableCell>
-                        <TableCell>Weight (kg)</TableCell>
-                        <TableCell>Fuel (ltr)</TableCell>
-                        <TableCell>Live Location</TableCell>
-                        <TableCell>Video Cam</TableCell>
+                        <TableCell sx={{
+                            padding: "0px 0px",
+                            // borderRight: "1px solid black",
+                            backgroundColor: "#e0e0df",
+                            fontSize: "1 rem"
+                        }}
+                        > DRIVER NAME</TableCell>
+                        <TableCell sx={{
+                            padding: "0px 0px",
+                            // borderRight: "1px solid black",
+                            backgroundColor: "#e0e0df",
+                            fontSize: "1 rem"
+                        }}
+                        > NIK</TableCell>
+                        <TableCell sx={{
+                            padding: "0px 0px",
+                            // borderRight: "1px solid black",
+                            backgroundColor: "#e0e0df",
+                            fontSize: "1 rem"
+                        }}
+                        > VEHICLE NAME</TableCell>
+                        <TableCell sx={{
+                            padding: "0px 0px",
+                            // borderRight: "1px solid black",
+                            backgroundColor: "#e0e0df",
+                            align: "center",
+                            fontSize: "1 rem"
+                        }}
+                        > PIC</TableCell>
+                        <TableCell sx={{
+                            padding: "0px 0px",
+                            // borderRight: "1px solid black",
+                            backgroundColor: "#e0e0df",
+                            fontSize: "1 rem"
+                        }}
+                        > TOTAL LOAD (kg)</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {monitoringVehicleList
+                    {driverList
                         .slice(
                             page * rowsPerPage,
                             page * rowsPerPage + rowsPerPage
@@ -170,37 +249,27 @@ const MonitoringTable = () => {
                         .map((vehicle, index) => (
                             <TableRow key={index}>
                                 <TableCell align="left">
-                                    {vehicle.vehicleName}
-                                </TableCell>
-                                <TableCell align="left">
                                     {vehicle.driverName}
                                 </TableCell>
+                                <TableCell align="left">
+                                    {vehicle.nik}
+                                </TableCell>
                                 <TableCell alignItems="left">
-                                    {vehicle.licensePlate}
+                                    {vehicle.vehicleName}
                                 </TableCell>
-                                <TableCell>{vehicle.lastPosition}</TableCell>
+                                <TableCell>{vehicle.pic}</TableCell>
                                 <TableCell align = "left">{vehicle.weight}</TableCell>
-                                <TableCell align = "left">{vehicle.fuel}</TableCell>
-                                <TableCell>
-                                    <IconButton>
-                                        <Icon color="info">my_location</Icon>
-                                    </IconButton>
-                                </TableCell>
-                                <TableCell>
-                                    <IconButton>
-                                        <Icon color="info">videocam</Icon>
-                                    </IconButton>
-                                </TableCell>
+                               
                             </TableRow>
                         ))}
                 </TableBody>
             </StyledTable>
 
             <TablePagination
-                sx={{ px: 2 }}
+                sx={{ px: 5 }}
                 rowsPerPageOptions={[10, 20, 30]}
                 component="div"
-                count={monitoringVehicleList.length}
+                count={driverList.length}
                 rowsPerPage={rowsPerPage}
                 page={page}
                 backIconButtonProps={{

@@ -2,7 +2,7 @@ import React from 'react'
 import { useTheme } from '@mui/system'
 import ReactEcharts from 'echarts-for-react'
 
-const ComparisonChart = ({ height, color = [] }) => {
+const TotalFuelPayloadChart = ({ height, color = [] }) => {
     const theme = useTheme()
 
     const option = {
@@ -14,19 +14,19 @@ const ComparisonChart = ({ height, color = [] }) => {
         legend: {
             show: true,
         },
-        color: ['#223388', 'rgba(34, 51, 136, 0.8)'],
         barGap: 0,
-        barMaxWidth: '64px',
+        barMaxWidth: '44px',
         tooltip: {},
         dataset: {
             source: [
-                ['Month', 'Website', 'App'],
-                ['Jan', 2200, 1200],
-                ['Feb', 800, 500],
-                ['Mar', 700, 1350],
-                ['Apr', 1500, 1250],
-                ['May', 2450, 450],
-                ['June', 1700, 1250],
+                ['Day', 'Fuel', 'Payload'],
+                ['01 Mar 2022', 1000, 8200],
+                ['02 Mar 2022', 950, 8120],
+                ['03 Mar 2022', 600, 7921],
+                ['04 Mar 2022', 700, 8000],
+                ['05 Mar 2022', 610, 8050],
+                ['06 Mar 2022', 670, 7720],
+                ['07 Mar 2022', 500, 4900],
             ],
         },
         xAxis: {
@@ -41,7 +41,7 @@ const ComparisonChart = ({ height, color = [] }) => {
                 show: false,
             },
             axisLabel: {
-                color: theme.palette.text.secondary,
+                color: theme.palette.text.primary,
                 fontSize: 13,
                 fontFamily: 'roboto',
             },
@@ -54,21 +54,21 @@ const ComparisonChart = ({ height, color = [] }) => {
                 show: false,
             },
             splitLine: {
-                // show: false
+                show: false,
                 lineStyle: {
                     color: theme.palette.text.secondary,
                     opacity: 0.15,
                 },
             },
             axisLabel: {
-                color: theme.palette.text.secondary,
+                color: theme.palette.text.primary,
                 fontSize: 13,
                 fontFamily: 'roboto',
             },
         },
         // Declare several bar series, each will be mapped
         // to a column of dataset.source by default.
-        series: [{ type: 'bar' }, { type: 'bar' }],
+        series: [{ type: 'line' }, { type: 'bar' }],
     }
 
     return (
@@ -82,4 +82,4 @@ const ComparisonChart = ({ height, color = [] }) => {
     )
 }
 
-export default ComparisonChart
+export default TotalFuelPayloadChart

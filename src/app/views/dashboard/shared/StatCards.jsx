@@ -20,7 +20,7 @@ const ContentBox = styled('div')(({ theme }) => ({
     flexWrap: 'wrap',
     alignItems: 'center',
     '& small': {
-        color: theme.palette.text.secondary,
+        color: theme.palette.primary.main,
     },
     '& .icon': {
         opacity: 0.6,
@@ -45,7 +45,7 @@ const StatCards = () => {
                     <ContentBox>
                         <Icon className="icon">local_gas_station</Icon>
                         <Box ml="12px">
-                            <Small>Cost Fuel</Small>
+                            <Small>Fuel Costs</Small>
                             <Heading>IDR 20.000.000</Heading>
                         </Box>
                     </ContentBox>
@@ -62,7 +62,7 @@ const StatCards = () => {
                         <Icon className="icon">build</Icon>
                         <Box ml="12px">
                             <Small sx={{ lineHeight: 1 }}>
-                                Cost Maintenance Vehicle
+                                Maintenance Costs
                             </Small>
                             <Heading>IDR 8.000.000</Heading>
                         </Box>
@@ -95,7 +95,7 @@ const StatCards = () => {
                     <ContentBox>
                         <Icon className="icon">attach_money</Icon>
                         <Box ml="12px">
-                            <Small>Total Cost</Small>
+                            <Small>Total Costs</Small>
                             <Heading>IDR 28.000.000</Heading>
                         </Box>
                     </ContentBox>

@@ -122,7 +122,7 @@ export const navigations = [
     {
         name: 'Monitoring',
         icon: 'monitoring',
-        badge: { value: '3', color: 'secondary' },
+        badge: { color: 'secondary' },
         children: [
             {
                 name: 'Monitoring Vehicle',
@@ -131,12 +131,12 @@ export const navigations = [
             },
             {
                 name: 'Monitoring Load',
-                path: '/material/buttons',
+                path: '/material/monitoring-load',
                 iconText: 'B',
             },
             {
                 name: 'Monitoring Fuel',
-                path: '/material/checkbox',
+                path: '/material/monitoring-fuel',
                 iconText: 'C',
             },
         ],
@@ -152,7 +152,7 @@ export const navigations = [
         children: [
             {
                 name: 'Master Driver',
-                path: '/material/autocomplete',
+                path: '/material/master-driver',
                 iconText: 'A',
             },
             {
@@ -168,16 +168,16 @@ export const navigations = [
         ],
     },
     {
-        label: 'Maintenance',
+        label: 'Service',
         type: 'label',
     },
     {
-        name: 'Maintenance',
+        name: 'Service',
         icon: 'build',
         badge: { color: 'secondary' },
         children: [
             {
-                name: 'Master Driver',
+                name: 'Maintenance Vehicle',
                 path: '/material/autocomplete',
                 iconText: 'A',
             },
@@ -199,8 +199,8 @@ export const navigations = [
     },
     {
         name: 'Report',
-        icon: 'report',
-        badge: { color: 'secondary' },
+        icon: 'assignment',
+        badge: { color: 'main' },
         children: [
             {
                 name: 'Report Driver',
@@ -220,18 +220,18 @@ export const navigations = [
         ],
     },
     
-    {
-        name: 'Charts',
-        icon: 'trending_up',
+    // {
+    //     name: 'Charts',
+    //     icon: 'trending_up',
 
-        children: [
-            {
-                name: 'Echarts',
-                path: '/charts/echarts',
-                iconText: 'E',
-            },
-        ],
-    },
+    //     children: [
+    //         {
+    //             name: 'Echarts',
+    //             path: '/charts/echarts',
+    //             iconText: 'E',
+    //         },
+    //     ],
+    // },
     // {
     //     name: 'Documentation',
     //     icon: 'launch',

@@ -33,108 +33,86 @@ const StyledTable = styled(Table)(({ theme }) => ({
 
 const monitoringVehicleList = [
     {
-        vehicleName: 'MITSUBISHI, CANTER',
+        vehicleName: 'MITSUBISHI, FUSO',
         driverName: 'DRIVER A',
-        licensePlate: 'B 7710 QWE',
+        licensePlate: 'B 7299 AAI',
         status: 'active',
-        fuel: 100,
-        weight: 730,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
         vehicleName: 'MITSUBISHI, FUSO',
-        driverName: 'DRIVER B',
-        licensePlate: 'B 7921 IOP',
+        driverName: 'DRIVER A',
+        licensePlate: 'B 7299 AAI',
         status: 'active',
-        fuel: 90,
-        weight: 770,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
         vehicleName: 'MITSUBISHI, FUSO',
-        driverName: 'DRIVER C',
-        licensePlate: 'B 7121 GHB',
+        driverName: 'DRIVER A',
+        licensePlate: 'B 7299 AAI',
         status: 'active',
-        fuel: 110,
-        weight: 810,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
         vehicleName: 'MITSUBISHI, FUSO',
-        driverName: 'DRIVER D',
-        licensePlate: 'B 7001 GWO',
+        driverName: 'DRIVER A',
+        licensePlate: 'B 7299 AAI',
         status: 'active',
-        fuel: 101,
-        weight: 790,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
         vehicleName: 'MITSUBISHI, FUSO',
-        driverName: 'DRIVER E',
-        licensePlate: 'B 7492 HJW',
+        driverName: 'DRIVER A',
+        licensePlate: 'B 7299 AAI',
         status: 'active',
-        fuel: 110,
-        weight: 840,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
         vehicleName: 'MITSUBISHI, FUSO',
-        driverName: 'DRIVER F',
-        licensePlate: 'B 7887 IOP',
+        driverName: 'DRIVER A',
+        licensePlate: 'B 7299 AAI',
         status: 'active',
-        fuel: 100,
-        weight: 812,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
         vehicleName: 'MITSUBISHI, FUSO',
-        driverName: 'DRIVER G',
-        licensePlate: 'B 7201 FGS',
+        driverName: 'DRIVER A',
+        licensePlate: 'B 7299 AAI',
         status: 'active',
-        fuel: 100,
-        weight: 810,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
         vehicleName: 'MITSUBISHI, FUSO',
-        driverName: 'DRIVER H',
-        licensePlate: 'B 7769 UJI',
+        driverName: 'DRIVER A',
+        licensePlate: 'B 7299 AAI',
         status: 'active',
-        fuel: 80,
-        weight: 833,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
         vehicleName: 'MITSUBISHI, FUSO',
-        driverName: 'DRIVER I',
-        licensePlate: 'B 7013 ULO',
+        driverName: 'DRIVER A',
+        licensePlate: 'B 7299 AAI',
         status: 'active',
-        fuel: 120,
-        weight: 820,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
-        vehicleName: 'TOYOTA, DYNA',
-        driverName: 'DRIVER J',
-        licensePlate: 'B 7291 GHW',
+        vehicleName: 'MITSUBISHI, FUSO',
+        driverName: 'DRIVER A',
+        licensePlate: 'B 7299 AAI',
         status: 'active',
-        fuel: 120,
-        weight: 810,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
-        vehicleName: 'MITSUBISHI, CANTER',
-        driverName: 'DRIVER K',
-        licensePlate: 'B 7772 HUK',
+        vehicleName: 'MITSUBISHI, FUSO',
+        driverName: 'DRIVER A',
+        licensePlate: 'B 7299 AAI',
         status: 'active',
-        fuel: 110,
-        weight: 823,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
 ]
 
-const MonitoringTable = () => {
-    const [rowsPerPage, setRowsPerPage] = React.useState(10)
+const MonitoringFuelTable = () => {
+    const [rowsPerPage, setRowsPerPage] = React.useState(5)
     const [page, setPage] = React.useState(0)
 
     const handleChangePage = (event, newPage) => {
@@ -155,9 +133,8 @@ const MonitoringTable = () => {
                         <TableCell>Driver Name</TableCell>
                         <TableCell>License Plate</TableCell>
                         <TableCell>Last Position</TableCell>
-                        <TableCell>Weight (kg)</TableCell>
-                        <TableCell>Fuel (ltr)</TableCell>
-                        <TableCell>Live Location</TableCell>
+                        <TableCell>Status</TableCell>
+                        <TableCell>GPS</TableCell>
                         <TableCell>Video Cam</TableCell>
                     </TableRow>
                 </TableHead>
@@ -175,12 +152,11 @@ const MonitoringTable = () => {
                                 <TableCell align="left">
                                     {vehicle.driverName}
                                 </TableCell>
-                                <TableCell alignItems="left">
+                                <TableCell align="left">
                                     {vehicle.licensePlate}
                                 </TableCell>
                                 <TableCell>{vehicle.lastPosition}</TableCell>
-                                <TableCell align = "left">{vehicle.weight}</TableCell>
-                                <TableCell align = "left">{vehicle.fuel}</TableCell>
+                                <TableCell>{vehicle.status}</TableCell>
                                 <TableCell>
                                     <IconButton>
                                         <Icon color="info">my_location</Icon>
@@ -216,4 +192,4 @@ const MonitoringTable = () => {
     )
 }
 
-export default MonitoringTable
+export default MonitoringFuelTable

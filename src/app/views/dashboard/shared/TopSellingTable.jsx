@@ -78,14 +78,17 @@ const TopSellingTable = () => {
                 <ProductTable>
                     <TableHead>
                         <TableRow>
-                            <TableCell sx={{ px: 0 }} colSpan={2}>
-                                 Driver Name
+                            <TableCell sx={{ px: 2 }} colSpan={2}>
+                                Driver Name
                             </TableCell>
                             <TableCell sx={{ px: 0 }} colSpan={2}>
                                 Vehicle Name
                             </TableCell>
                             <TableCell sx={{ px: 0 }} colSpan={2}>
                                 Total Payload
+                            </TableCell>
+                            <TableCell sx={{ px: 0 }} colSpan={2}>
+                                PIC
                             </TableCell>
                             {/* <TableCell sx={{ px: 0 }} colSpan={2}>
                                 Stock Status
@@ -122,8 +125,16 @@ const TopSellingTable = () => {
                                     
                                     {product.load} kg
                                 </TableCell>
-
                                 <TableCell
+                                    align="left"
+                                    colSpan={2}
+                                    sx={{ px: 0, textTransform: 'capitalize' }}
+                                >
+                                    
+                                    {product.pic}
+                                </TableCell>
+
+                                {/* <TableCell
                                     sx={{ px: 0 }}
                                     align="left"
                                     colSpan={2}
@@ -143,10 +154,10 @@ const TopSellingTable = () => {
                                             out of stock
                                         </Small>
                                     )}
-                                </TableCell>
+                                </TableCell> */}
                                 <TableCell sx={{ px: 0 }} colSpan={1}>
                                     <IconButton>
-                                        <Icon color="primary">edit</Icon>
+                                        <Icon color="primary">remove_red_eye</Icon>
                                     </IconButton>
                                 </TableCell>
                             </TableRow>
@@ -163,6 +174,7 @@ const productList = [
         imgUrl: '/assets/images/products/headphone-2.jpg',
         driverName: 'Driver A',
         vehicleName :'MITSUBISHI, CANTER',
+        pic: 'koordinator A',
         load: 8000,
         available: 15,
     },
@@ -170,6 +182,7 @@ const productList = [
         imgUrl: '/assets/images/products/headphone-3.jpg',
         driverName: 'Driver B',
         vehicleName :'MITSUBISHI, CANTER',
+        pic: 'koordinator B',
         load: 7100,
         available: 30,
     },
@@ -177,6 +190,7 @@ const productList = [
         imgUrl: '/assets/images/products/iphone-2.jpg',
         driverName: 'Driver C',
         vehicleName :'MITSUBISHI, CANTER',
+        pic: 'koordinator C',
         load: 5400,
         available: 35,
     },
@@ -184,6 +198,7 @@ const productList = [
         imgUrl: '/assets/images/products/iphone-1.jpg',
         driverName: 'Driver D',
         vehicleName :'MITSUBISHI, CANTER',
+        pic: 'koordinator D',
         load: 5300,
         available: 0,
     },
@@ -191,6 +206,7 @@ const productList = [
         imgUrl: '/assets/images/products/headphone-3.jpg',
         driverName: 'Driver E',
         vehicleName :'MITSUBISHI, CANTER',
+        pic: 'koordinator E',
         load: 5000,
         available: 5,
     },

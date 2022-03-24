@@ -2,7 +2,7 @@ import React from 'react'
 import { useTheme } from '@mui/system'
 import ReactEcharts from 'echarts-for-react'
 
-const DoughnutChart = ({ height, color = [] }) => {
+const ReminderChart = ({ height, color = [] }) => {
     const theme = useTheme()
 
     const option = {
@@ -45,7 +45,7 @@ const DoughnutChart = ({ height, color = [] }) => {
 
         series: [
             {
-                name: 'Status Vehicle',
+                name: 'Service Reminder',
                 type: 'pie',
                 // radius: ['45%', '72.55%'],
                 center: ['50%', '50%'],
@@ -80,12 +80,12 @@ const DoughnutChart = ({ height, color = [] }) => {
                 },
                 data: [
                     {
-                        value: 187,
-                        name: 'active',
+                        value: 12,
+                        name: 'vehicle overdue',
                     },
                     {
-                        value: 13,
-                        name: 'Out of Service',
+                        value: 41,
+                        name: 'overdue soon',
                     },
                 ],
                 itemStyle: {
@@ -110,4 +110,4 @@ const DoughnutChart = ({ height, color = [] }) => {
     )
 }
 
-export default DoughnutChart
+export default ReminderChart
