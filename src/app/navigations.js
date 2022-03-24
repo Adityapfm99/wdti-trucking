@@ -157,11 +157,16 @@ export const navigations = [
             },
             {
                 name: 'Master Vehicle',
-                path: '/material/buttons',
+                path: '/material/master-vehicle',
                 iconText: 'B',
             },
             {
                 name: 'Master Supplier',
+                path: '/material/checkbox',
+                iconText: 'C',
+            },
+            {
+                name: 'Sensor',
                 path: '/material/checkbox',
                 iconText: 'C',
             },

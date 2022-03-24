@@ -10,8 +10,6 @@ import {
 } from '@mui/material'
 import React from 'react'
 import { Box, styled } from '@mui/system'
-import { Button } from '@mui/material'
-import { Link } from 'react-router-dom';
 
 const StyledTable = styled(Table)(({ theme }) => ({
     whiteSpace: 'pre',
@@ -42,7 +40,7 @@ const driverList = [
         licensePlate: 'B 7710 QWE',
         status: 'active',
         fuel: 100,
-        weight: 730,
+        weight: 9200,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
@@ -53,7 +51,7 @@ const driverList = [
         licensePlate: 'B 7921 IOP',
         status: 'active',
         fuel: 90,
-        weight: 770,
+        weight: 9770,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
@@ -64,7 +62,7 @@ const driverList = [
         pic: 'KOORDINATOR C',
         status: 'active',
         fuel: 110,
-        weight: 810,
+        weight: 10810,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
@@ -75,7 +73,7 @@ const driverList = [
         licensePlate: 'B 7001 GWO',
         status: 'active',
         fuel: 101,
-        weight: 790,
+        weight: 8390,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
@@ -86,7 +84,7 @@ const driverList = [
         licensePlate: 'B 7492 HJW',
         status: 'active',
         fuel: 110,
-        weight: 840,
+        weight: 6840,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
@@ -97,7 +95,7 @@ const driverList = [
         licensePlate: 'B 7887 IOP',
         status: 'active',
         fuel: 100,
-        weight: 812,
+        weight: 5812,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
@@ -108,7 +106,7 @@ const driverList = [
         licensePlate: 'B 7201 FGS',
         status: 'active',
         fuel: 100,
-        weight: 810,
+        weight: 6693,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
@@ -119,7 +117,7 @@ const driverList = [
         licensePlate: 'B 7769 UJI',
         status: 'active',
         fuel: 80,
-        weight: 833,
+        weight: 8300,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
@@ -130,7 +128,7 @@ const driverList = [
         licensePlate: 'B 7013 ULO',
         status: 'active',
         fuel: 120,
-        weight: 820,
+        weight: 5820,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
@@ -141,7 +139,7 @@ const driverList = [
         licensePlate: 'B 7291 GHW',
         status: 'active',
         fuel: 120,
-        weight: 810,
+        weight: 6793,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
@@ -152,12 +150,12 @@ const driverList = [
         licensePlate: 'B 7772 HUK',
         status: 'active',
         fuel: 110,
-        weight: 823,
+        weight: 7809,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
 ]
 
-const MonitoringTable = () => {
+const MasterDriverTable = () => {
     const [rowsPerPage, setRowsPerPage] = React.useState(10)
     const [page, setPage] = React.useState(0)
 
@@ -187,19 +185,12 @@ const MonitoringTable = () => {
             display: 'none',
         },
     }))
-    
-    const StyledButton = styled(Button)(({ theme }) => ({
-        margin: theme.spacing(1),
-    }))
+
 
     return (
-
         <Box width="100%" overflow="auto">
-                <StyledButton component={Link} to="/material/monitoring-vehicle" variant="contained" color="primary">
-                    Add Driver
-                </StyledButton>
             <StyledTable>
-
+           
                 <TableHead>
                     <TableRow>
                         <TableCell sx={{
@@ -285,4 +276,4 @@ const MonitoringTable = () => {
     )
 }
 
-export default MonitoringTable
+export default MasterDriverTable

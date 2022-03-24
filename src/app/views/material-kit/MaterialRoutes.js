@@ -19,6 +19,9 @@ const MonitoringVehicle = Loadable(lazy(() => import("./monitoring-vehicle/AppTa
 const MonitoringLoad = Loadable(lazy(() => import("./monitoring-load/AppTable")));
 const MonitoringFuel = Loadable(lazy(() => import("./monitoring-fuel/AppTable")));
 const MasterDriver = Loadable(lazy(() => import("./master-driver/AppTable")));
+const MasterVehicle = Loadable(lazy(() => import("./master-vehicle/AppTable")));
+const AddDriver = Loadable(lazy(() => import("../material-kit/add-driver/AppForm")));
+const AddVehicle = Loadable(lazy(() => import("../material-kit/add-vehicle/AppForm")));
 
 const materialRoutes = [
     {
@@ -80,6 +83,18 @@ const materialRoutes = [
     {
         path: '/material/master-driver',
         element: <MasterDriver />,
+    },
+    {
+        path: '/material/master-vehicle',
+        element: <MasterVehicle />,
+    },
+    {
+        path: '/material/add-driver',
+        element: <AddDriver/>,
+    },
+    {
+        path: '/material/add-vehicle',
+        element: <AddVehicle/>,
     },
     {
         path: '/material/expansion-panel',
