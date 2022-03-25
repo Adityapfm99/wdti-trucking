@@ -10,6 +10,7 @@ import UpgradeCard from './shared/UpgradeCard'
 import { styled, useTheme } from '@mui/system'
 import TopSellingTable from './shared/TopSellingTable'
 import TotalFuelPayloadChart from './shared/TotalFuelPayloadChart'
+import MarkerMap from '../map/MarkerMap'
 
 const ContentBox = styled('div')(({ theme }) => ({
     margin: '30px',
@@ -51,6 +52,7 @@ const Analytics = () => {
                                 height="200px"
                               
                             />
+                            <MarkerMap  height="200px"/>
                         <H4>Drivers Performance</H4>
                         <TopSellingTable />
                         

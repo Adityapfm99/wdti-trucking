@@ -1,6 +1,7 @@
 import React, { lazy } from 'react'
 import Loadable from 'app/components/Loadable/Loadable';
 
+
 const AppTable = Loadable(lazy(() => import("./tables/AppTable")));
 const AppForm = Loadable(lazy(() => import("./forms/AppForm")));
 const AppButton = Loadable(lazy(() => import("./buttons/AppButton")));
@@ -22,6 +23,10 @@ const MasterDriver = Loadable(lazy(() => import("./master-driver/AppTable")));
 const MasterVehicle = Loadable(lazy(() => import("./master-vehicle/AppTable")));
 const AddDriver = Loadable(lazy(() => import("../material-kit/add-driver/AppForm")));
 const AddVehicle = Loadable(lazy(() => import("../material-kit/add-vehicle/AppForm")));
+const Invoice = Loadable(lazy(() => import("../forms/invoice-form/InvoiceForm")));
+
+const AppMap = Loadable(lazy(() => import("../map/MapRoutes")));
+
 
 const materialRoutes = [
     {
@@ -48,6 +53,11 @@ const materialRoutes = [
         path: '/material/menu',
         element: <AppMenu />,
     },
+    {
+        path: '/map',
+        element: <AppMap />,
+    },
+    
     {
         path: '/material/checkbox',
         element: <AppCheckbox />,
@@ -79,6 +89,10 @@ const materialRoutes = [
     {
         path: '/material/monitoring-fuel',
         element: <MonitoringFuel />,
+    },
+    {
+        path: '/forms/invoice-form',
+        element: <Invoice />,
     },
     {
         path: '/material/master-driver',

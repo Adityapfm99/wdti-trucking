@@ -1,39 +1,41 @@
 export const navigations = [
     {
+        label: 'Dashboard',
+        type: 'label',
+    },
+    {
         name: 'Dashboard',
         path: '/dashboard/default',
         icon: 'dashboard',
     },
     {
-        label: 'PAGES',
+        label: 'Monitoring',
         type: 'label',
     },
     {
-        name: 'Session/Auth',
-        icon: 'security',
-        children: [
-            {
-                name: 'Sign in',
-                iconText: 'SI',
-                path: '/session/signin',
-            },
-            {
-                name: 'Sign up',
-                iconText: 'SU',
-                path: '/session/signup',
-            },
-            {
-                name: 'Forgot Password',
-                iconText: 'FP',
-                path: '/session/forgot-password',
-            },
-            {
-                name: 'Error',
-                iconText: '404',
-                path: '/session/404',
-            },
-        ],
+        name: 'Monitoring',
+        icon: 'monitoring',
+        path: '/material/monitoring-vehicle',
+        badge: { color: 'secondary' },
+        // children: [
+        //     {
+        //         name: 'Monitoring Vehicle',
+        //         path: '/material/monitoring-vehicle',
+        //         iconText: 'A',
+        //     },
+        //     {
+        //         name: 'Monitoring Load',
+        //         path: '/material/monitoring-load',
+        //         iconText: 'B',
+        //     },
+        //     {
+        //         name: 'Monitoring Fuel',
+        //         path: '/material/monitoring-fuel',
+        //         iconText: 'C',
+        //     },
+        // ],
     },
+   
     {
         label: 'Components',
         type: 'label',
@@ -115,32 +117,8 @@ export const navigations = [
             },
         ],
     },
-    {
-        label: 'Monitoring',
-        type: 'label',
-    },
-    {
-        name: 'Monitoring',
-        icon: 'monitoring',
-        badge: { color: 'secondary' },
-        children: [
-            {
-                name: 'Monitoring Vehicle',
-                path: '/material/monitoring-vehicle',
-                iconText: 'A',
-            },
-            {
-                name: 'Monitoring Load',
-                path: '/material/monitoring-load',
-                iconText: 'B',
-            },
-            {
-                name: 'Monitoring Fuel',
-                path: '/material/monitoring-fuel',
-                iconText: 'C',
-            },
-        ],
-    },
+
+
     {
         label: 'Master',
         type: 'label',
@@ -167,7 +145,7 @@ export const navigations = [
             },
             {
                 name: 'Sensor',
-                path: '/material/checkbox',
+                path: '/forms/invoice-form',
                 iconText: 'C',
             },
         ],
@@ -221,6 +199,36 @@ export const navigations = [
                 name: 'Report',
                 path: '/material/checkbox',
                 iconText: 'C',
+            },
+        ],
+    },
+    {
+        label: 'Account',
+        type: 'label',
+    },
+    {
+        name: 'Account',
+        icon: 'vpn_key',
+        children: [
+            // {
+            //     name: 'Sign in',
+            //     iconText: 'SI',
+            //     path: '/session/signin',
+            // },
+            // {
+            //     name: 'Sign up',
+            //     iconText: 'SU',
+            //     path: '/session/signup',
+            // },
+            {
+                name: 'Forgot Password',
+                iconText: 'FP',
+                path: '/session/forgot-password',
+            },
+            {
+                name: 'Error',
+                iconText: '404',
+                path: '/session/404',
             },
         ],
     },

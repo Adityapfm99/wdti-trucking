@@ -35,7 +35,7 @@ const AppTable = () => {
                     ]}
                 />
                 <StyledButton component={Link} to="/material/add-vehicle" variant="contained" color="primary">
-                Add Vehicle
+                + Add Vehicle
             </StyledButton>
             <input
                 accept="image/*"
@@ -46,6 +46,7 @@ const AppTable = () => {
                 type="file"
             />
             <label htmlFor="contained-button-file">
+                
                 <StyledButton variant="contained" color="secondary" component="span">
                     Upload
                 </StyledButton>

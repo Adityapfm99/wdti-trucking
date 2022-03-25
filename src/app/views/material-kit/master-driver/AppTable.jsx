@@ -35,10 +35,10 @@ const AppTable = () => {
                     ]}
                 />
                 <StyledButton component={Link} to="/material/add-driver" variant="contained" color="primary">
-                    Add Driver
+                    + Add Driver
                 </StyledButton>
                 <input
-                    accept="image/*"
+                    accept="csv/*"
                     className="input"
                     id="contained-button-file"
                     multiple
