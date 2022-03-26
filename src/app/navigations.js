@@ -140,7 +140,7 @@ export const navigations = [
             },
             {
                 name: 'Master Supplier',
-                path: '/material/checkbox',
+                path: '/material/master-supplier',
                 iconText: 'C',
             },
             {

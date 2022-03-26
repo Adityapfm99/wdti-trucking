@@ -60,8 +60,10 @@ const SimpleForm = () => {
     return (
         <div>
             <ValidatorForm onSubmit={handleSubmit} onError={() => null}>
-                <Grid container spacing={6}>
+                <Grid container spacing={12}>
+  
                     <Grid item lg={6} md={6} sm={12} xs={12} sx={{ mt: 2 }}>
+                    Driver Name
                         <TextField
                             label="Driver Name"
                             onChange={handleChange}
@@ -71,6 +73,7 @@ const SimpleForm = () => {
                             validators={['required']}
                             errorMessages={['this field is required']}
                         />
+                        NIK
                          <TextField
                             label="NIK"
                             onChange={handleChange}
@@ -80,7 +83,7 @@ const SimpleForm = () => {
                             validators={['required']}
                             errorMessages={['this field is required']}
                         />
-
+                        PIC
                         <TextField
                             label="PIC"
                             onChange={handleChange}
@@ -89,6 +92,7 @@ const SimpleForm = () => {
                             value={pic || ''}
                            
                         />
+                        Vehicle
                          <AutocompleteCombo 
                        
                          />
@@ -98,7 +102,7 @@ const SimpleForm = () => {
                 <Button component={Link} to="/material/master-driver" color="primary" variant="contained" type="submit">
                     <Icon>send</Icon>
                     <Span sx={{ pl: 1, textTransform: 'capitalize' }}>
-                        Submit
+                        Save
                     </Span>
                 </Button>
             </ValidatorForm>

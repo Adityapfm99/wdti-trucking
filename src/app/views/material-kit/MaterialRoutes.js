@@ -24,7 +24,8 @@ const MasterVehicle = Loadable(lazy(() => import("./master-vehicle/AppTable")));
 const AddDriver = Loadable(lazy(() => import("../material-kit/add-driver/AppForm")));
 const AddVehicle = Loadable(lazy(() => import("../material-kit/add-vehicle/AppForm")));
 const Invoice = Loadable(lazy(() => import("../forms/invoice-form/InvoiceForm")));
-
+const MasterSupplier = Loadable(lazy(() => import("./master-supplier/AppTable")));
+const AddSupplier = Loadable(lazy(() => import("../material-kit/add-supplier/AppForm")));
 const AppMap = Loadable(lazy(() => import("../map/MapRoutes")));
 
 
@@ -99,6 +100,10 @@ const materialRoutes = [
         element: <MasterDriver />,
     },
     {
+        path: '/material/master-supplier',
+        element: <MasterSupplier />,
+    },
+    {
         path: '/material/master-vehicle',
         element: <MasterVehicle />,
     },
@@ -109,6 +114,10 @@ const materialRoutes = [
     {
         path: '/material/add-vehicle',
         element: <AddVehicle/>,
+    },
+    {
+        path: '/material/add-supplier',
+        element: <AddSupplier/>,
     },
     {
         path: '/material/expansion-panel',

@@ -52,7 +52,6 @@ const Analytics = () => {
                                 height="200px"
                               
                             />
-                            <MarkerMap  height="200px"/>
                         <H4>Drivers Performance</H4>
                         <TopSellingTable />
                         

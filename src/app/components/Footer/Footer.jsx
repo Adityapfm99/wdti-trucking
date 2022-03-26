@@ -26,9 +26,9 @@ const AppFooter = styled(Toolbar)(() => ({
 const FooterContent = styled('div')(() => ({
     width: '100%',
     display: 'flex',
-    alignItems: 'center',
+    alignItems: 'left',
     padding: '0px 1rem',
-    maxWidth: '1170px',
+    // maxWidth: '1170px',
     margin: '0 auto',
 }))
 
@@ -50,7 +50,6 @@ const Footer = () => {
                         <Span sx={{ m: "auto" }}></Span>
                         <Paragraph sx={{ m: 0 }}>
                             PT Wide Technologies Indonesia
-                            {/* <a href="http://ui-lib.com">UI Lib</a> */}
                         </Paragraph>
                     </FooterContent>
                 </AppFooter>

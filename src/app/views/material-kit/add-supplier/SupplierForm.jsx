@@ -11,10 +11,7 @@ import { styled } from '@mui/system'
 import { Span } from 'app/components/Typography'
 import React, { useState, useEffect } from 'react'
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
-import VehicleBrand from './VehicleBrand'
-import VehicleName from './VehicleName'
-import VehicleYear from './VehicleYear'
-import VehicleStatus from './VehicleStatus'
+
 
 const TextField = styled(TextValidator)(() => ({
     width: '100%',
@@ -56,11 +53,11 @@ const SimpleForm = () => {
     }
 
     const {
+        address,
+        supplierName,
+        supplierCode,
+        picSupplier,
         status,
-        sensorFuelCode,
-        sensorTankCode,
-        sensorLoadCode,
-        license,
     } = state
 
     return (
@@ -68,50 +65,51 @@ const SimpleForm = () => {
             <ValidatorForm onSubmit={handleSubmit} onError={() => null}>
                 <Grid container spacing={6}>
                     <Grid item lg={6} md={6} sm={12} xs={12} sx={{ mt: 2 }}>
-                        Vehicle Brand
-                        <VehicleBrand />
-                        Vehicle Name
-                        <VehicleName />
-                        Vehicle year
-                        <VehicleYear />
-                        Vehicle Status
-                        <VehicleStatus/>
+                        Supplier Name
+                        <TextField
+                            label="Supplier Name"
+                            onChange={handleChange}
+                            type="text"
+                            name="supplierName"
+                            value={supplierName || ''}
+                            validators={['required']}
+                            errorMessages={['this field is required']}
+                        />
+                        Address
+                        <TextField
+                            label="Address"
+                            onChange={handleChange}
+                            type="text"
+                            name="address"
+                            multiline
+                            rows={3}
+                            value={address || ''}
+                        />
+                        
+                       
                     </Grid>
+                    
 
                     <Grid item lg={6} md={6} sm={12} xs={12} sx={{ mt: 2 }}>
-                        License Plate
-                    <TextField label="License Plate" validators={['required']} onChange={handleChange} type="text" name="licensePlate" errorMessages={['this field is required']} value={license || ''} />
-                        Sensor Fuel Code
+                    PIC Supplier
                         <TextField
-                            label="Sensor Fuel Code"
+                            label="PIC Supplier"
                             onChange={handleChange}
                             type="text"
-                            name="sensorFuel"
-                            value={sensorFuelCode || ''}
+                            name="picSupplier"
+                            value={picSupplier || ''}
                             validators={['required']}
                             errorMessages={['this field is required']}
                         />
-                        Sensor Load Code
+                        Supplier Code
                         <TextField
-                            label="Sensor Load Code"
+                            label="Supplier Code"
                             onChange={handleChange}
-                            name="SensorLoadCode"
-                            type="tect"
-                            value={sensorLoadCode || ''}
-                            validators={['required']}
-                            errorMessages={['this field is required']}
-                        />
-                        Sensor Tank Code
-                        <TextField
-                            label="Sensor Tank Code"
-                            onChange={handleChange}
-                            name="sensorTank"
                             type="text"
-                            value={sensorTankCode || ''}
-                            validators={['required']}
-                            errorMessages={['this field is required']}
+                            name="supplierCode"
+                            value={supplierCode || ''}
                         />
-                        status
+                        status Supplier
                         <RadioGroup
                             sx={{ mb: 2 }}
                             value={status || ''}
@@ -133,6 +131,7 @@ const SimpleForm = () => {
                             />
                            
                         </RadioGroup>
+                        
 
                     </Grid>
                 </Grid>

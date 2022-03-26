@@ -1,8 +1,7 @@
 import React from 'react'
-import PaginationTable from './MonitoringTable'
+import SimpleForm from './SupplierForm'
 import { Breadcrumb, SimpleCard } from 'app/components'
 import { Box, styled } from '@mui/system'
-import MarkerMap from '../../map/MarkerMap'
 
 const Container = styled('div')(({ theme }) => ({
     margin: '30px',
@@ -17,25 +16,24 @@ const Container = styled('div')(({ theme }) => ({
     },
 }))
 
-const AppTable = () => {
+const AppForm = () => {
     return (
         <Container>
             <div className="breadcrumb">
                 <Breadcrumb
                     routeSegments={[
-                        { name: 'Material', path: '/material' },
-                        { name: 'Monitoring Vehicle' },
+                        { name: 'Master', path: '/master' },
+                        { name: 'Form' },
                     ]}
                 />
             </div>
-
-            <Box py="12px" />
-            <MarkerMap/>
-            <SimpleCard title="Monitoring Vehicle">
-                <PaginationTable />
+            <SimpleCard title="Add Supplier">
+                <SimpleForm />
             </SimpleCard>
+            <Box py="12px" />
+
         </Container>
     )
 }
 
-export default AppTable
+export default AppForm

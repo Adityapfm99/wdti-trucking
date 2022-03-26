@@ -4,7 +4,7 @@ import { createFilterOptions } from '@mui/material/Autocomplete'
 import { styled } from '@mui/system'
 
 const AutoComplete = styled(Autocomplete)(() => ({
-    width: 800,
+    width: 750,
     marginBottom: '16px',
 }))
 
@@ -64,6 +64,50 @@ const AutocompleteCombo = () => {
                     />
                 )}
             />
+
+            {/* <AutoComplete
+                value={value}
+                onChange={handleChange}
+                filterOptions={filterOptions}
+                options={suggestions}
+                getOptionLabel={(option) => {
+                    // e.g value selected with enter, right from the input
+                    if (typeof option === 'string') {
+                        return option
+                    }
+                    if (option.inputValue) {
+                        return option.inputValue
+                    }
+                    return option.label
+                }}
+                renderOption={(option) => option.label}
+                style={{ width: 300 }}
+                freeSolo
+                renderInput={(params) => (
+                    <TextField
+                        {...params}
+                        label="Free solo with text demo"
+                        variant="outlined"
+                        fullWidth
+                    />
+                )}
+            />
+
+            <AutoComplete
+                options={suggestions}
+                getOptionLabel={(option) => option.label}
+                getOptionDisabled={(option) =>
+                    option === suggestions[0] || option === suggestions[2]
+                }
+                renderInput={(params) => (
+                    <TextField
+                        {...params}
+                        label="Disabled option"
+                        variant="outlined"
+                        fullWidth
+                    />
+                )}
+            /> */}
         </Fragment>
     )
 }
