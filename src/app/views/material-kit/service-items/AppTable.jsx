@@ -1,7 +1,11 @@
 import React from 'react'
-import PaginationTable from './MonitoringTable'
+import PaginationTable from './ServiceItemsTable'
 import { Breadcrumb, SimpleCard } from 'app/components'
 import { Box, styled } from '@mui/system'
+
+import TotalFuelPayloadChart from '../../dashboard/shared/TotalFuelPayloadChart'
+import { Button } from '@mui/material'
+import { Link } from 'react-router-dom'
 
 const Container = styled('div')(({ theme }) => ({
     margin: '30px',
@@ -15,6 +19,10 @@ const Container = styled('div')(({ theme }) => ({
         },
     },
 }))
+  
+const StyledButton = styled(Button)(({ theme }) => ({
+    margin: theme.spacing(1),
+}))
 
 const AppTable = () => {
     return (
@@ -23,13 +31,24 @@ const AppTable = () => {
                 <Breadcrumb
                     routeSegments={[
                         { name: 'Material', path: '/material' },
-                        { name: 'Monitoring Vehicle' },
+                        { name: 'Service Items' },
                     ]}
                 />
+                <StyledButton component={Link} to="/material/add-items-service" variant="contained" color="primary">
+                + Add Items
+            </StyledButton>
+            <input
+                accept="image/*"
+                className="input"
+                id="contained-button-file"
+                multiple
+                hidden
+                type="file"
+            />
+    
             </div>
 
-            <Box py="12px" />
-            <SimpleCard title="Monitoring Vehicle">
+            <SimpleCard title="Service items">
                 <PaginationTable />
             </SimpleCard>
         </Container>

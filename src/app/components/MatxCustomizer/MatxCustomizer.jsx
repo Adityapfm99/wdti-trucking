@@ -138,7 +138,7 @@ const MatxCustomizer = () => {
                             </IconButton>
                         </Controller>
                         <Box px={3} mb={2} display="flex">
-                            {/* <Button
+                            <Button
                                 variant="outlined"
                                 color={tabIndex === 0 ? 'secondary' : 'primary'}
                                 onClick={() => handleTabChange(0)}
@@ -152,7 +152,7 @@ const MatxCustomizer = () => {
                                 onClick={() => handleTabChange(1)}
                             >
                                 Settings
-                            </Button> */}
+                            </Button>
                         </Box>
 
                         <StyledScrollBar options={{ suppressScrollX: true }}>
@@ -164,7 +164,7 @@ const MatxCustomizer = () => {
                                         {demoLayouts.map((layout) => (
                                             <LayoutBox
                                                 color="secondary"
-                                                badgeContent={'Pro'}
+                                                badgeContent={''}
                                                 invisible={!layout.isPro}
                                                 key={layout.name}
                                             >
@@ -222,7 +222,7 @@ const demoLayouts = [
     {
         name: 'Light Sidebar',
         thumbnail: '/assets/images/screenshots/layout1-customizer.png',
-        isPro: true,
+        isPro: false,
         options: {
             activeLayout: 'layout1',
             activeTheme: 'blue',
@@ -245,7 +245,7 @@ const demoLayouts = [
     {
         name: 'Compact Sidebar',
         thumbnail: '/assets/images/screenshots/layout5-customizer.png',
-        isPro: true,
+        isPro: false,
         options: {
             activeLayout: 'layout1',
             activeTheme: 'blue',
@@ -265,7 +265,7 @@ const demoLayouts = [
     {
         name: 'Dark Sidebar',
         thumbnail: '/assets/images/screenshots/layout1-blue-customizer.png',
-        isPro: true,
+        isPro: false,
         options: {
             activeLayout: 'layout1',
             activeTheme: 'blue',

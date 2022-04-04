@@ -8,9 +8,9 @@ import DoughnutChart from './shared/Doughnut'
 import ServiceReminder from './shared/serviceReminder'
 import UpgradeCard from './shared/UpgradeCard'
 import { styled, useTheme } from '@mui/system'
-import TopSellingTable from './shared/TopSellingTable'
+import TopDriversChart from './shared/topDriverChart'
 import TotalFuelPayloadChart from './shared/TotalFuelPayloadChart'
-import MarkerMap from '../map/MarkerMap'
+import MapSection from '../material-kit/map/Map' // import the map here
 
 const ContentBox = styled('div')(({ theme }) => ({
     margin: '30px',
@@ -52,8 +52,9 @@ const Analytics = () => {
                                 height="200px"
                               
                             />
+                            {/* <MapSection  height="200px"/> */}
                         <H4>Drivers Performance</H4>
-                        <TopSellingTable />
+                        <TopDriversChart   height="200px"/>
                         
                         {/* <StatCards2 /> */}
                         {/* <H4>Ongoing Projects</H4>

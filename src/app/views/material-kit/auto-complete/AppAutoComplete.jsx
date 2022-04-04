@@ -3,6 +3,7 @@ import { Breadcrumb, SimpleCard } from 'app/components'
 import AutocompleteCombo from './AutocompleteCombo'
 import AsyncAutocomplete from './AsyncAutocomplete'
 import BadgeAutocomplete from './BadgeAutocomplete'
+import LocationAutoComplete from './LocationAutocomplete'
 import { Box, styled } from '@mui/system'
 
 const Container = styled('div')(({ theme }) => ({
@@ -39,6 +40,9 @@ const AppAutoComplete = () => {
             <Box py="12px" />
             <SimpleCard title="Asyncronous Autocomplete">
                 <BadgeAutocomplete></BadgeAutocomplete>
+            </SimpleCard>
+            <SimpleCard title="LocationAutoComplete Autocomplete">
+                <LocationAutoComplete></LocationAutoComplete>
             </SimpleCard>
         </Container>
     )

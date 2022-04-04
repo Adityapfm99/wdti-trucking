@@ -9,8 +9,6 @@ import MuiDialogTitle from '@mui/material/DialogTitle'
 import MuiDialogContent from '@mui/material/DialogContent'
 import MuiDialogActions from '@mui/material/DialogActions'
 
-import MarkerMap from '../../map/MarkerMap'
-
 const DialogTitleRoot = styled(MuiDialogTitle)(({ theme }) => ({
     margin: 0,
     padding: theme.spacing(2),
@@ -90,7 +88,6 @@ class CustomizedDialogs extends React.Component {
                         Modal title
                     </DialogTitle>
                     <DialogContent dividers>
-                        <MarkerMap></MarkerMap>
                     </DialogContent>
                     <DialogActions>
                         <Button onClick={this.handleClose} color="primary">

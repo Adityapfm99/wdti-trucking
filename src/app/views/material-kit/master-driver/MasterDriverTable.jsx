@@ -157,11 +157,13 @@ const driverList = [
 
 const MasterDriverTable = () => {
     const [rowsPerPage, setRowsPerPage] = React.useState(10)
+    const [selectedVehicles, setSelectedVehicles] = React.useState([]);
     const [page, setPage] = React.useState(0)
 
     const handleChangePage = (event, newPage) => {
         setPage(newPage)
     }
+    
 
     const handleChangeRowsPerPage = (event) => {
         setRowsPerPage(+event.target.value)
@@ -229,6 +231,13 @@ const MasterDriverTable = () => {
                             fontSize: "1 rem"
                         }}
                         > TOTAL LOAD (kg)</TableCell>
+                        <TableCell sx={{
+                            padding: "0px 0px",
+                            // borderRight: "1px solid black",
+                            backgroundColor: "#e0e0df",
+                            fontSize: "1 rem"
+                        }}
+                        > ACTION</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -250,7 +259,14 @@ const MasterDriverTable = () => {
                                 </TableCell>
                                 <TableCell>{vehicle.pic}</TableCell>
                                 <TableCell align = "left">{vehicle.weight}</TableCell>
-                               
+                                <TableCell >
+                                 <IconButton>
+                                    <Icon tooltip="edit" color="info">create</Icon>
+                                 </IconButton>
+                                <IconButton>
+                                    <Icon color="error">cancel</Icon>
+                                </IconButton>
+                                </TableCell>
                             </TableRow>
                         ))}
                 </TableBody>

@@ -2,7 +2,7 @@ import React from 'react'
 import { useTheme } from '@mui/system'
 import ReactEcharts from 'echarts-for-react'
 
-const TotalFuelPayloadChart = ({ height, color = [] }) => {
+const TopDriversChart = ({ height, color = [] }) => {
     const theme = useTheme()
 
     const option = {
@@ -19,14 +19,14 @@ const TotalFuelPayloadChart = ({ height, color = [] }) => {
         tooltip: {},
         dataset: {
             source: [
-                ['Day', 'Fuel', 'Payload'],
-                ['01 Mar 2022', 1000, 8200],
-                ['02 Mar 2022', 950, 8120],
-                ['03 Mar 2022', 600, 7921],
-                ['04 Mar 2022', 700, 8000],
-                ['05 Mar 2022', 610, 8050],
-                ['06 Mar 2022', 670, 7720],
-                ['07 Mar 2022', 500, 4900],
+                ['Date', 'Driver A', 'Driver B', 'Driver C', 'Driver D','Driver E'],
+                ['01 Mar 2022', 2200, 2100, 1950, 1800, 1500],
+                ['03 Mar 2022', 2800, 2500, 1500, 1600, 1200],
+                ['03 Mar 2022', 2700, 2350, 1800, 1700, 2399],
+                ['05 Mar 2022', 2500, 1250, 1950, 1100, 1100],
+                ['05 Mar 2022', 2450, 1000, 1950, 1500, 750],
+                ['06 Mar 2022', 2400, 1750, 1200, 1400, 700],
+                ['07 Mar 2022', 2700, 2250, 1500, 1800, 900],
             ],
         },
         xAxis: {
@@ -68,9 +68,38 @@ const TotalFuelPayloadChart = ({ height, color = [] }) => {
         },
         // Declare several bar series, each will be mapped
         // to a column of dataset.source by default.
-        series: [{ type: 'line' }, { type: 'bar' ,itemStyle: {
-            barBorderRadius: [10, 10, 0, 0],
-        },}],
+        series: [
+            {
+                type: 'bar',
+                itemStyle: {
+                    barBorderRadius: [10, 10, 0, 0],
+                },
+            },
+            {
+                type: 'bar',
+                itemStyle: {
+                    barBorderRadius: [10, 10, 0, 0],
+                },
+            },
+            {
+                type: 'bar',
+                itemStyle: {
+                    barBorderRadius: [10, 10, 0, 0],
+                },
+            },
+            {
+                type: 'bar',
+                itemStyle: {
+                    barBorderRadius: [10, 10, 0, 0],
+                },
+            },
+            {
+                type: 'bar',
+                itemStyle: {
+                    barBorderRadius: [10, 10, 0, 0],
+                },
+            },
+        ],
     }
 
     return (
@@ -84,4 +113,4 @@ const TotalFuelPayloadChart = ({ height, color = [] }) => {
     )
 }
 
-export default TotalFuelPayloadChart
+export default TopDriversChart

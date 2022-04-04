@@ -268,6 +268,13 @@ const MonitoringTable = () => {
                             fontSize: "1 rem"
                         }}
                         > ACTIVE</TableCell>
+                         <TableCell sx={{
+                            padding: "0px 0px",
+                            // borderRight: "1px solid black",
+                            backgroundColor: "#e0e0df",
+                            fontSize: "1 rem"
+                        }}
+                        > ACTION</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -287,7 +294,14 @@ const MonitoringTable = () => {
                                 <TableCell align = "left">{vehicle.sensorLoad}</TableCell>
                                 <TableCell align = "left">{vehicle.sensorTank}</TableCell>
                                 <TableCell align = "left">{vehicle.active}</TableCell>
-                               
+                                <TableCell >
+                                 <IconButton>
+                                    <Icon tooltip="edit" color="info">create</Icon>
+                                 </IconButton>
+                                <IconButton>
+                                    <Icon color="error">cancel</Icon>
+                                </IconButton>
+                                </TableCell>
                             </TableRow>
                         ))}
                 </TableBody>

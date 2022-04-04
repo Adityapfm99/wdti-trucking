@@ -26,7 +26,10 @@ const AddVehicle = Loadable(lazy(() => import("../material-kit/add-vehicle/AppFo
 const Invoice = Loadable(lazy(() => import("../forms/invoice-form/InvoiceForm")));
 const MasterSupplier = Loadable(lazy(() => import("./master-supplier/AppTable")));
 const AddSupplier = Loadable(lazy(() => import("../material-kit/add-supplier/AppForm")));
-const AppMap = Loadable(lazy(() => import("../map/MapRoutes")));
+// const AppMap = Loadable(lazy(() => import("../material-kit/map/AppMap")));
+
+const ServiceItems = Loadable(lazy(() => import("../material-kit/service-items/AppTable")));
+const AddItemsService = Loadable(lazy(() => import("../material-kit/add-items-service/AppForm")));
 
 
 const materialRoutes = [
@@ -54,10 +57,10 @@ const materialRoutes = [
         path: '/material/menu',
         element: <AppMenu />,
     },
-    {
-        path: '/map',
-        element: <AppMap />,
-    },
+    // {
+    //     path: '/material/map',
+    //     element: <AppMap />,
+    // },
     
     {
         path: '/material/checkbox',
@@ -110,6 +113,14 @@ const materialRoutes = [
     {
         path: '/material/add-driver',
         element: <AddDriver/>,
+    },
+    {
+        path: '/material/add-items-service',
+        element: <AddItemsService/>,
+    },
+    {
+        path: '/material/service-items',
+        element: <ServiceItems/>,
     },
     {
         path: '/material/add-vehicle',

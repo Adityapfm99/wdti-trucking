@@ -33,77 +33,55 @@ const StyledTable = styled(Table)(({ theme }) => ({
     },
 }))
 
-const supplierList = [
+const ItemsList = [
     {
-        supplierName: 'FUSO',
-        supplierCode: 'MITSUBISHI',
-        picSupplier: '354928129366001',
-        address: 'KOORDINATOR A',
+        category: 'Service',
+        itemName: 'Routine Service',
         
     },
     {
-        supplierName: 'FUSO',
-        supplierCode: 'MITSUBISHI',
-        picSupplier: '354928129366001',
-        address: 'KOORDINATOR A',
+        category: 'Service',
+        itemName: 'Oil Engine Change',
     },
     {
-        supplierName: 'FUSO',
-        supplierCode: 'MITSUBISHI',
-        picSupplier: '354928129366001',
-        address: 'KOORDINATOR A',
+        category: 'SpareParts',
+        itemName: 'Brake Pad(s) Replacement',
     },
     {
-        supplierName: 'FUSO',
-        supplierCode: 'MITSUBISHI',
-        picSupplier: '354928129366001',
-        address: 'KOORDINATOR A',
+        category: 'Service',
+        itemName: 'Engine Belt Inspection',
     },
     {
-        supplierName: 'FUSO',
-        supplierCode: 'MITSUBISHI',
-        picSupplier: '354928129366001',
-        address: 'KOORDINATOR A',
+        category: 'SpareParts',
+        itemName: 'Fuel Injector Replacement',
     },
     {
-        supplierName: 'FUSO',
-        supplierCode: 'MITSUBISHI',
-        picSupplier: '354928129366001',
-        address: 'KOORDINATOR A',
+        category: 'Service',
+        itemName: 'Oil Transmission change',
     },
     {
-        supplierName: 'FUSO',
-        supplierCode: 'MITSUBISHI',
-        picSupplier: '354928129366001',
-        address: 'KOORDINATOR A',
+        category: 'Service',
+        itemName: 'Other Maintenance',
     },
     {
-        supplierName: 'FUSO',
-        supplierCode: 'MITSUBISHI',
-        picSupplier: '354928129366001',
-        address: 'KOORDINATOR A',
+        category: 'SpareParts',
+        itemName: 'Wheel Bearing Replacement',
     },
     {
-        supplierName: 'FUSO',
-        supplierCode: 'MITSUBISHI',
-        picSupplier: '354928129366001',
-        address: 'KOORDINATOR A',
+        category: 'SpareParts',
+        itemName: 'Water Pump Replacement',
     },
     {
-        supplierName: 'FUSO',
-        supplierCode: 'MITSUBISHI',
-        picSupplier: '354928129366001',
-        address: 'KOORDINATOR A',
+        category: 'SpareParts',
+        itemName: 'Tie Rod End Replacement',
     },
     {
-        supplierName: 'FUSO',
-        supplierCode: 'MITSUBISHI',
-        picSupplier: '354928129366001',
-        address: 'KOORDINATOR A',
+        category: 'Service',
+        itemName: 'Routine Service',
     },
 ]
 
-const SupplierTable = () => {
+const ServiceItemsTable = () => {
     const [rowsPerPage, setRowsPerPage] = React.useState(10)
     const [page, setPage] = React.useState(0)
 
@@ -146,52 +124,33 @@ const SupplierTable = () => {
                             backgroundColor: "#e0e0df",
                             fontSize: "1 rem"
                         }}
-                        > SUPPLIER NAME</TableCell>
+                        > CATEGORY</TableCell>
                         <TableCell sx={{
                             padding: "0px 0px",
                             // borderRight: "1px solid black",
                             backgroundColor: "#e0e0df",
                             fontSize: "1 rem"
                         }}
-                        > SUPPLIER CODE</TableCell>
-                        <TableCell sx={{
+                        > ITEM NAME</TableCell>
+                         <TableCell sx={{
                             padding: "0px 0px",
                             // borderRight: "1px solid black",
                             backgroundColor: "#e0e0df",
-                            fontSize: "1 rem"
-                        }}
-                        > PIC SUPPLIER</TableCell>
-                        <TableCell sx={{
-                            padding: "0px 0px",
-                            // borderRight: "1px solid black",
-                            backgroundColor: "#e0e0df",
-                            align: "center",
-                            fontSize: "1 rem"
-                        }}
-                        > ADDRESS</TableCell>
-                        <TableCell sx={{
-                            padding: "0px 0px",
-                            // borderRight: "1px solid black",
-                            backgroundColor: "#e0e0df",
-                            align: "center",
                             fontSize: "1 rem"
                         }}
                         > ACTION</TableCell>
-                       
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {supplierList
+                    {ItemsList
                         .slice(
                             page * rowsPerPage,
                             page * rowsPerPage + rowsPerPage
                         )
-                        .map((supplier, index) => (
+                        .map((service, index) => (
                             <TableRow key={index}>
-                                <TableCell>{supplier.supplierName}</TableCell>
-                                <TableCell> {supplier.supplierCode} </TableCell>
-                                <TableCell>{supplier.picSupplier}</TableCell>
-                                <TableCell>{supplier.address}</TableCell>
+                                <TableCell>{service.category}</TableCell>
+                                <TableCell> {service.itemName} </TableCell>
                                 <TableCell >
                                  <IconButton>
                                     <Icon tooltip="edit" color="info">create</Icon>
@@ -209,7 +168,7 @@ const SupplierTable = () => {
                 sx={{ px: 5 }}
                 rowsPerPageOptions={[10, 20, 30]}
                 component="div"
-                count={supplierList.length}
+                count={ItemsList.length}
                 rowsPerPage={rowsPerPage}
                 page={page}
                 backIconButtonProps={{
@@ -225,4 +184,4 @@ const SupplierTable = () => {
     )
 }
 
-export default SupplierTable
+export default ServiceItemsTable
