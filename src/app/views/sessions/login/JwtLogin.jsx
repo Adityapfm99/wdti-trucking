@@ -54,7 +54,7 @@ const JwtLogin = () => {
     const navigate = useNavigate()
     const [loading, setLoading] = useState(false)
     const [userInfo, setUserInfo] = useState({
-        email: 'jason@ui-lib.com',
+        email: 'admin@wdti.com',
         password: 'dummyPass',
     })
     const [message, setMessage] = useState('')
