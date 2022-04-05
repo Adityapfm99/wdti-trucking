@@ -143,11 +143,11 @@ export const navigations = [
                 path: '/material/master-supplier',
                 iconText: 'C',
             },
-            {
-                name: 'Sensor',
-                path: '/forms/invoice-form',
-                iconText: 'C',
-            },
+            // {
+            //     name: 'Sensor',
+            //     path: '/forms/invoice-form',
+            //     iconText: 'C',
+            // },
             {
                 name: 'Service Items',
                 path: '/material/service-items',
@@ -197,17 +197,17 @@ export const navigations = [
         children: [
             {
                 name: 'Report Driver',
-                path: '/material/autocomplete',
+                path: '/session/404',
                 iconText: 'A',
             },
             {
                 name: 'Report vehicle',
-                path: '/material/buttons',
+                path: '/session/404',
                 iconText: 'B',
             },
             {
                 name: 'Report',
-                path: '/material/checkbox',
+                path: '/session/404',
                 iconText: 'C',
             },
         ],
